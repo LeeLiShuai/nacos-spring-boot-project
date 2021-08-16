@@ -53,6 +53,10 @@ public class NacosDiscoveryAutoRegister
 	@Value("${spring.application.name:}")
 	private String applicationName;
 
+    /**
+     * 启动时触发
+     * @param event
+     */
     @Override
     public void onApplicationEvent(WebServerInitializedEvent event) {
 
@@ -84,6 +88,7 @@ public class NacosDiscoveryAutoRegister
         }
 
         try {
+            //注册
             namingService.registerInstance(serviceName, register.getGroupName(),
                     register);
             logger.info("Finished auto register service : {}, ip : {}, port : {}",

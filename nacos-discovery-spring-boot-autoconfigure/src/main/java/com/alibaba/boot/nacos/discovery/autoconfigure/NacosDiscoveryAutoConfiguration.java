@@ -31,7 +31,7 @@ import static com.alibaba.nacos.spring.util.NacosBeanUtils.DISCOVERY_GLOBAL_NACO
 
 /**
  * Nacos Discovery Auto {@link Configuration}
- *
+ * 自动配置类
  * @author <a href="mailto:fangjian0423@gmail.com">Jim</a>
  */
 @ConditionalOnProperty(name = NacosDiscoveryConstants.ENABLED, matchIfMissing = true)
